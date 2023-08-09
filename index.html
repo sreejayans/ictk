@@ -1,0 +1,103 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AQI Prediction</title>
+    
+    <style>
+      body {
+        background-color: lightyellow;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+  
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+  
+      #predictionResult {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      
+    </style>
+</head>
+<body>
+  <button>  
+    <a href="/">BACK TO HOME</a>
+  </button>
+  <h1>Predict AQI</h1>
+  <center>
+    <img src='/static/IMAGES/aqi (1).jpg' alt="Picture">
+  </center>
+  <!-- Input Form -->
+  <div class="input form">
+    <center>
+      <form action="/prediction" method="post" id="input head">
+        <h1 id="heading">AQI Prediction form</h1>
+        <h3 id="input">Enter the pollutants level</h3>
+        <label for="PM2.5">PM2.5:</label>
+        <input type="text" id="PM2.5" name="PM2.5">
+        <label for="PM10">PM10:</label>
+        <input type="text" id="PM10" name="PM10">
+        <label for="NO">NO:</label>
+        <input type="text" id="NO" name="NO">
+        <label for="NO2">NO2:</label>
+        <input type="text" id="NO2" name="NO2">
+        <label for="NOx">NOx:</label>
+        <input type="text" id="NOx" name="NOx">
+        <label for="NH3">NH3:</label>
+        <input type="text" id="NH3" name="NH3">
+        <label for="CO">CO:</label>
+        <input type="text" id="CO" name="CO">
+        <label for="SO2">SO2:</label>
+        <input type="text" id="SO2" name="SO2">
+        <label for="O3">O3:</label>
+        <input type="text" id="O3" name="O3">
+        <br><br>
+        <button id="submit" type="submit">Submit</button>
+      </form>      
+    </center>
+  </div>
+  <h5>All the pollutants are measured in ug / m3</h6>
+  <footer>
+    <p>Copyright &copy; 2023 My Web Page</p>
+  </footer> 
+</body>
+</html>
